@@ -60,8 +60,6 @@
                   </Supertip>
                   <Icon>
                     <bt:Image size="16" resid="icon16"/>
-                    <bt:Image size="32" resid="icon32"/>
-                    <bt:Image size="80" resid="icon80"/>
                   </Icon>
                   <Action xsi:type="ExecuteFunction">
                     <FunctionName>reportPhishing</FunctionName>
@@ -75,8 +73,11 @@
     </Hosts>
 
     <Resources>
+      <bt:Images>
+        <bt:Image id="icon16" DefaultValue="https://yourdomain.com/youraddin/assets/icon16.png"/>
+      </bt:Images>
       <bt:Urls>
-        <bt:Url id="functionFile" DefaultValue="https://raw.githubusercontent.com/Simon9877/Report-Phishing-Outlook-Add-in/refs/heads/main/function-file.js?token=GHSAT0AAAAAADGZH3267GWH4CERHFKEGGIA2EKAQKA"/>
+        <bt:Url id="functionFile" DefaultValue="https://yourdomain.com/youraddin/function-file.js"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Security Tools"/>
