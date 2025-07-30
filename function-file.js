@@ -5,7 +5,7 @@ Office.onReady(() => {
 function reportPhishing(event) {
   const item = Office.context.mailbox.item;
   item.forwardAsync({
-    toRecipients: ["phishing@yourdomain.com"],
+    toRecipients: ["servicedesk@komplex-it.dk"],
     htmlBody: "<p>This email was reported as phishing.</p>"
   }, (asyncResult) => {
     if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {

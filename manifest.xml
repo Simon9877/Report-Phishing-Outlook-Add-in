@@ -11,8 +11,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Report Phishing"/>
   <Description DefaultValue="Report suspicious emails by forwarding to your IT security team."/>
-  <IconUrl DefaultValue="https://yourdomain.com/youraddin/assets/icon32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://yourdomain.com/youraddin/assets/icon80.png"/>
+  <IconUrl DefaultValue="https://github.com/Simon9877/Report-Phishing-Outlook-Add-in/blob/main/icon.png?raw=true"/>
+  <HighResolutionIconUrl DefaultValue="https://github.com/Simon9877/Report-Phishing-Outlook-Add-in/blob/main/icon.png?raw=true"/>
   <SupportUrl DefaultValue="https://yourdomain.com/support"/>
 
   <Hosts>
@@ -28,7 +28,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://yourdomain.com/youraddin/taskpane.html"/>
+        <SourceLocation DefaultValue="https://raw.githubusercontent.com/Simon9877/Report-Phishing-Outlook-Add-in/refs/heads/main/taskpane.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -74,10 +74,10 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="https://yourdomain.com/youraddin/assets/icon16.png"/>
+        <bt:Image id="icon16" DefaultValue="https://github.com/Simon9877/Report-Phishing-Outlook-Add-in/blob/main/icon.png?raw=true"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="functionFile" DefaultValue="https://yourdomain.com/youraddin/function-file.js"/>
+        <bt:Url id="functionFile" DefaultValue="https://raw.githubusercontent.com/Simon9877/Report-Phishing-Outlook-Add-in/refs/heads/main/function-file.js"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Security Tools"/>
