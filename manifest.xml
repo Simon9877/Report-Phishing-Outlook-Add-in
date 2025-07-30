@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+           xsi:type="MailApp">
+
+  <Id>f9a1f444-bafe-47c2-9ef1-123456789abc</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Your Company</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Report Phishing"/>
+  <Description DefaultValue="Report suspicious emails by forwarding to your IT security team."/>
+  <IconUrl DefaultValue="https://yourdomain.com/youraddin/assets/icon32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://yourdomain.com/youraddin/assets/icon80.png"/>
+  <SupportUrl DefaultValue="https://yourdomain.com/support"/>
+
+  <Hosts>
+    <Host Name="Mailbox"/>
+  </Hosts>
+
+  <Requirements>
+    <Sets DefaultMinVersion="1.8">
+      <Set Name="Mailbox"/>
+    </Sets>
+  </Requirements>
+
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://yourdomain.com/youraddin/taskpane.html"/>
+        <RequestedHeight>250</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
+
+  <Permissions>ReadItem</Permissions>
+
+  <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
+
+  <VersionOverrides xsi:type="VersionOverridesV1_1">
+    <Requirements>
+      <bt:Sets DefaultMinVersion="1.8">
+        <bt:Set Name="Mailbox" />
+      </bt:Sets>
+    </Requirements>
+
+    <Hosts>
+      <Host xsi:type="MailHost">
+        <ExtensionPoint xsi:type="MessageReadCommandSurface">
+          <OfficeCommandSurface>
+            <CustomTab id="customTab">
+              <Group id="customGroup">
+                <Label resid="groupLabel"/>
+                <Control xsi:type="Button" id="reportPhishingButton">
+                  <Label resid="buttonLabel"/>
+                  <Supertip>
+                    <Title resid="buttonLabel"/>
+                    <Description resid="buttonDesc"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16"/>
+                    <bt:Image size="32" resid="icon32"/>
+                    <bt:Image size="80" resid="icon80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>reportPhishing</FunctionName>
+                  </Action>
+                </Control>
+              </Group>
+            </CustomTab>
+          </OfficeCommandSurface>
+        </ExtensionPoint>
+      </Host>
+    </Hosts>
+
+    <Resources>
+      <bt:Urls>
+        <bt:Url id="functionFile" DefaultValue="https://yourdomain.com/youraddin/function-file.js"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="groupLabel" DefaultValue="Security Tools"/>
+        <bt:String id="buttonLabel" DefaultValue="Report Phishing"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="buttonDesc" DefaultValue="Forward this email to your security team for analysis."/>
+      </bt:LongStrings>
+    </Resources>
+
+    <FunctionFile resid="functionFile"/>
+  </VersionOverrides>
+</OfficeApp>
