@@ -76,7 +76,7 @@
 
     <Resources>
       <bt:Urls>
-        <bt:Url id="functionFile" DefaultValue="https://yourdomain.com/youraddin/function-file.js"/>
+        <bt:Url id="functionFile" DefaultValue="https://raw.githubusercontent.com/Simon9877/Report-Phishing-Outlook-Add-in/refs/heads/main/function-file.js?token=GHSAT0AAAAAADGZH3267GWH4CERHFKEGGIA2EKAQKA"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Security Tools"/>
